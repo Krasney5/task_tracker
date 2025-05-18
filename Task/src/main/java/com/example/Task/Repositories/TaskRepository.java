@@ -12,8 +12,6 @@ public interface TaskRepository extends CrudRepository<Task, Long> {
 
     public List<Task> findByUserName(String name);
 
-    public Task updateTask(Task task);
-
-    public void delete(Task task);
+    public void deleteById(long id);
 
 }

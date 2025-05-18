@@ -18,4 +18,5 @@ public class Task {
     private String description;
     private String userName;
     private LocalDate timeOfCreation;
+    private boolean isCompleted;
 }
