@@ -6,6 +6,7 @@ import com.example.Task.Services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -15,7 +16,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task saveTask(Task task){
-        //логика автоматической выставки времени
+        task.setTimeOfCreation(LocalDate.now());
         return repository.save(task);
     }
 
