@@ -4,10 +4,11 @@ package com.example.Task.Models;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-
+import lombok.Getter;
 import java.time.LocalDate;
 
 @Entity
+@Getter
 public class Task {
     @Id
     @GeneratedValue
@@ -18,14 +19,8 @@ public class Task {
     private LocalDate timeOfCreation;
     private boolean isCompleted;
 
-    public int getId() {
-        return id;
-    }
     public void setTimeOfCreation(LocalDate localDate){
         timeOfCreation = localDate;
     }
 
-    public LocalDate getTimeOfCreation() {
-        return timeOfCreation;
-    }
 }
