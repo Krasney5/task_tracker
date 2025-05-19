@@ -26,6 +26,17 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
+    public Task updateTask(Task task) {
+        if (task.isCompleted()){
+            repository.deleteById(task.getId());
+            return null;
+        }else{
+            return repository.save(task);
+        }
+
+    }
+
+    @Override
     public String deleteById(long id){
         repository.deleteById(id);
         return "удалено";

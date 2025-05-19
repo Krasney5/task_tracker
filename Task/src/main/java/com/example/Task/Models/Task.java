@@ -23,4 +23,15 @@ public class Task {
         timeOfCreation = localDate;
     }
 
+    public LocalDate getTimeOfCreation() {
+        return timeOfCreation;
+    }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

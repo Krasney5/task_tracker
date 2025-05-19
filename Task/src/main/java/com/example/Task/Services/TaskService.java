@@ -12,5 +12,6 @@ public interface TaskService{
 
     public Task saveTask(Task task);
     public List<Task> findTaskByUserName(String userName);
+    public Task updateTask(Task task);
     public String deleteById(long id);
 }
